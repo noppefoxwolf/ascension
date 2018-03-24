@@ -3,6 +3,7 @@
 @interface SBFluidSwitcherViewController : UIViewController{}
 -(void)setAppKillingModeEnabled:(BOOL)arg1 animated:(BOOL)arg2;
 -(void)_updateVisibleItems;
+-(void)_handleDismissTapGesture:(UITapGestureRecognizer* )arg1;
 @end
 
 @interface SBSwitcherCardCloseBox: UIButton {}
@@ -15,6 +16,11 @@
 -(void)_updateVisibleItems {
 	%orig;
 	[self setAppKillingModeEnabled: YES animated: YES];
+}
+
+-(void)_handleDismissTapGesture:(UITapGestureRecognizer* )arg1 {
+	[self setAppKillingModeEnabled: NO animated: NO];
+	%orig(arg1);
 }
 %end
 
