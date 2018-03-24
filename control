@@ -1,0 +1,9 @@
+Package: com.noppelab.tweak.ascension
+Name: Ascension
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Just swipe up card to kill task in AppSwitcher. for iPhoneX.
+Maintainer: Tomoya Hirano
+Author: Tomoya Hirano
+Section: Tweaks
